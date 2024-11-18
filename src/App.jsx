@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Link, NavLink } from "react-router-dom";
 import { routesPage } from "./routes/Routes"; 
 import { GlobalStyles } from "./styles/GlobalStyles";
-import { NavBar } from "./components/sections/header/NavBar";
+import { NavBar } from "./components/sections/NavBar";
 
 export const App = () => {
   return (

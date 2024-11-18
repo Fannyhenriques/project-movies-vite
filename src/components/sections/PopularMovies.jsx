@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
-import { Grid } from "../components/ui/Grid.jsx";
+import { Link } from "react-router-dom";
+import { Grid } from "../ui/Grid.jsx";
 
 const PopularMovieContainer = styled.div `
 width: 100%;
@@ -15,6 +16,7 @@ box-sizing: border-box;
 `;
 
 const CardWrapper = styled.div `
+  cursor: pointer;
   width: 100%;
   display: flex;
   align-items: center;
@@ -27,7 +29,7 @@ const MovieCard = styled.img `
   width: 100%;
   transition: opacity 0.3s ease;
   ${CardWrapper}:hover & {
-    filter: brightness(0.4);
+    filter: brightness(0.3);
 }
 `;
 const TitleDisplay = styled.span `
@@ -60,9 +62,11 @@ export const PopularMovies = ({popularMovies, isLoading }) => {
         {popularMovies && popularMovies.length > 0 ? (
           popularMovies.map((movie) => (
             <CardWrapper key={movie.id}>
-              <MovieCard src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
-              <TitleDisplay>{movie.title}</TitleDisplay>
-              </CardWrapper>
+            <Link to={`/popular-movie-info/${movie.id}`}>
+            <MovieCard src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
+            </Link>
+            <TitleDisplay>{movie.title}</TitleDisplay>
+            </CardWrapper>
           ))
         ) : (
           <p>No movies available.</p>
