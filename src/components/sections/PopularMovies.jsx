@@ -48,9 +48,7 @@ const TitleDisplay = styled.span `
 
 
 export const PopularMovies = ({popularMovies, isLoading }) => {
-  console.log("isLoading:", isLoading); 
-  console.log("popularMovies:", popularMovies);
-
+  
   if (isLoading) {
 		return <p>Loading Movies...</p>;
 	}  

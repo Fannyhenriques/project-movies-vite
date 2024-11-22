@@ -1,16 +1,13 @@
-import { Route } from "react-router";
+import { Route } from "react-router-dom";
 import { Home } from "../pages/Home.jsx";
-import { PopularMovies } from "../components/sections/PopularMovies.jsx";
-import {PopularMovieInfo} from "../pages/PopularMovieInfo.jsx";
-// import { UpcomingMovies } from "../pages/UpcomingMovies.jsx";
-// import { About } from "../pages/About.jsx";
+import { Movies } from "../api/Movies.jsx";
 
-export const routesPage = (
-  <>
-    <Route path="/" element={<Home />} />
-    <Route path="/popular-movies" element={<PopularMovies />} />
-    <Route path="/popular-movie-info/:movieId" element={<PopularMovieInfo />} />
-    {/* <Route path="/upcoming-movies" element={<UpcomingMovies />} />
-    <Route path="/about" element={<About />} /> */}
-  </>
-);
+export const routesPage = [
+  <Route key="home" path="/" element={<Home />} />,
+  <Route key="popular-movies" path="/popular-movies" element={<Movies />} />,
+  <Route
+    key="popular-movie-info"
+    path="/popular-movie-info/:movieId"
+    element={<Movies />}
+  />,
+];

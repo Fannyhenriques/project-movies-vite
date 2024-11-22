@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 export const PopularMovieInfo = ({popularMovieInfo, isLoading}) => {
-  const {movieId} = useParams();
+  console.log(popularMovieInfo)
   if (isLoading) {
     return <p>Loading Movie Details</p>
   }
