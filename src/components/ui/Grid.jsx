@@ -3,8 +3,8 @@ import styled from "styled-components"
 
 const GridStyle = styled.div`
   display: grid;
-  grid-template-columns: ${(props) => props.columns || "repeat(auto-fill, minmax(0, 250px))"};
-  gap: ${(props) => props.gap || "1px"};
+  grid-template-columns: ${(props) => props.columns || "repeat(auto-fill, minmax(0, 290px))"};
+  gap: ${(props) => props.gap || "10px"};
   max-width: 100%;
 `;
 

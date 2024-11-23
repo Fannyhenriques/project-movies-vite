@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import { Grid } from "../ui/Grid.jsx";
+import { Grid } from "../../ui/Grid.jsx";
 
 const PopularMovieContainer = styled.div `
-width: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-width: 100%;
-text-align: center;
-padding: 16px;
-box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+  box-sizing: border-box;
 
 `;
 
@@ -28,8 +28,8 @@ const CardWrapper = styled.div `
 const MovieCard = styled.img `
   width: 100%;
   transition: opacity 0.3s ease;
-  ${CardWrapper}:hover & {
-    filter: brightness(0.3);
+${CardWrapper}:hover & {
+  filter: brightness(0.3);
 }
 `;
 const TitleDisplay = styled.span `

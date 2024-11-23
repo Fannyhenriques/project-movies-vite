@@ -1,9 +1,9 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { PopularMovies } from "../components/sections/PopularMovies";
-import { PopularMovieInfo } from "../pages/PopularMovieInfo";
+import { PopularMovies } from "../movies/PopularMovies";
+import { PopularMovieInfo } from "../../../pages/PopularMovieInfo";
 
-export const Movies = () => {
+export const FetchMovies = () => {
   const API_KEY = "5f89608902c84def71e6303da949a9c4";
   const POPULAR_MOVIES_URL = `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}&language=en-US&page=1`;
   const MOVIE_DETAILS_URL = `https://api.themoviedb.org/3/movie`;
