@@ -3,6 +3,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { Grid } from "../../ui/Grid.jsx";
 
+const PopularTopline = styled.h2`
+text-align: center;
+`;
+
 const PopularMovieContainer = styled.div `
   width: 100%;
   display: flex;
@@ -12,7 +16,6 @@ const PopularMovieContainer = styled.div `
   text-align: center;
   padding: 16px;
   box-sizing: border-box;
-
 `;
 
 const CardWrapper = styled.div `
@@ -54,7 +57,7 @@ export const PopularMovies = ({popularMovies, isLoading }) => {
 	}  
   return (
     <>
-      <h2>Popular Movies</h2>
+      <PopularTopline>POPULAR MOVIES</PopularTopline>
       <PopularMovieContainer>
       <Grid >
         {popularMovies && popularMovies.length > 0 ? (

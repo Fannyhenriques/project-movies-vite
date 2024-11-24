@@ -5,15 +5,30 @@ const Nabvar = styled.nav `
 display: flex;
 flex-direction: column;
 align-items: center;
-justify-content: space-evenly;
+justify-content: flex-end;
+height: 150px;
 `;
 
 const NavList = styled.ul `
 list-style-type: none;
 display: flex;
 flex-direction: row;
-justify-content: space-between;
+align-items: flex-end;
 gap: 100px;
+;
+`;
+const NavLinkStyled = styled(NavLink)`
+  color: white;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
 `;
 
 export const NavBar = () => {
@@ -21,10 +36,10 @@ export const NavBar = () => {
       <Nabvar>
         <NavList>
           <li>
-            <NavLink to="/"> Home </NavLink>
+            <NavLinkStyled to="/"> Home </NavLinkStyled>
           </li>
           <li>
-            <NavLink to="/upcoming-movies"> Upcoming Movies </NavLink>
+            <NavLinkStyled to="/upcoming-movies"> Upcoming Movies </NavLinkStyled>
           </li>
         </NavList>
       </Nabvar>

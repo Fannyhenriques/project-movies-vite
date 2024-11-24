@@ -8,9 +8,9 @@ background-size: cover;
 background-position: center;
 color: white;
 text-align: center;
-height: 300px;
+height: 200px;
 margin: 0;
-padding: 0;
+padding-top: 100px;
 width: 100%;
 `;
 
@@ -18,15 +18,15 @@ const Heading = styled.p`
   font-family: "Bangers", system-ui;
   font-weight: 400;
   font-size: 50px;
-padding: 0;
-margin: 0;
+  padding: 0;
+  margin: 0;
 `;
 
 export const Header = () => {
   return(
     <HeaderContainer> 
     <Heading>MOVIE LIBRARY</Heading>
-    <NavBar>navbar</NavBar>
+    <NavBar/>
     </HeaderContainer>
   );
 };
