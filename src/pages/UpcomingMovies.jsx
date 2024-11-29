@@ -6,6 +6,7 @@ import { Grid } from "../components/ui/Grid.jsx";
 
 const UpcomingTopline = styled.h2`
   text-align: center;
+  font-size: 30px;
 `;
 
 const UpcomingMovieContainer = styled.div`

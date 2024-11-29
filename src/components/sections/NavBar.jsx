@@ -6,7 +6,7 @@ const Nabvar = styled.nav`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  height: 150px;
+  height: 80px;
 `;
 
 const NavList = styled.ul`
@@ -18,8 +18,9 @@ const NavList = styled.ul`
 `;
 
 const NavLinkStyled = styled(NavLink)`
-  color: white;
+  color: #c9c0c9;
   text-decoration: none;
+  font-size: 20px;
 
   &:hover {
     text-decoration: underline;
@@ -36,10 +37,13 @@ export const NavBar = () => {
     <Nabvar>
       <NavList>
         <li>
-          <NavLinkStyled to="/"> Home </NavLinkStyled>
+          <NavLinkStyled to="/"> HOME </NavLinkStyled>
         </li>
         <li>
-          <NavLinkStyled to="/upcoming-movies"> Upcoming Movies </NavLinkStyled>
+          <NavLinkStyled to="/upcoming-movies"> UPCOMING MOVIES </NavLinkStyled>
+        </li>
+        <li>
+          <NavLinkStyled to="/about"> ABOUT </NavLinkStyled>
         </li>
       </NavList>
     </Nabvar>

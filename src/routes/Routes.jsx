@@ -1,6 +1,7 @@
 import { Routes, Route } from "react-router-dom"; // Make sure to import Routes too
 import { Home } from "../pages/Home.jsx";
 import { FetchMovies } from "../components/sections/movies/FetchMovies.jsx";
+import { About } from "../pages/About.jsx";
 
 export const routesPage = (
   <>
@@ -9,6 +10,7 @@ export const routesPage = (
     <Route key="popular-movie-info" path="/popular-movie-info/:movieId" element={<FetchMovies />} />
     <Route key="upcoming-movies" path="/upcoming-movies" element={<FetchMovies />} />
     <Route key="upcoming-movie-info" path="/upcoming-movie-info/:movieId" element={<FetchMovies />} />
+    <Route key="About" path="/About" element={<About />} />
   </>
 );
 

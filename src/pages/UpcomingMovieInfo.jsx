@@ -17,7 +17,7 @@ export const UpcomingMovieInfo = ({ upcomingMovieInfo, isLoading }) => {
       <div>
         <h2>{upcomingMovieInfo.title}</h2>
         <img
-          src={`https://image.tmdb.org/t/p/w500${upcomingMovieInfo.poster_path}`}
+          src={`https://image.tmdb.org/t/p/w1280${upcomingMovieInfo.poster_path}`}
           alt={upcomingMovieInfo.title}
         />
         <p>{upcomingMovieInfo.overview}</p>

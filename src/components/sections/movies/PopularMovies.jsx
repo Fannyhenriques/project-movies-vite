@@ -5,6 +5,7 @@ import { Grid } from "../../ui/Grid.jsx";
 
 const PopularTopline = styled.h2`
   text-align: center;
+  font-size: 30px;
 `;
 
 const PopularMovieContainer = styled.div`
