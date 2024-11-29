@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Link, NavLink } from "react-router-dom";
-import { routesPage } from "./routes/Routes"; 
+import { routesPage } from "./routes/routes"; 
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { NavBar } from "./components/sections/NavBar";
 
