@@ -53,7 +53,7 @@ export const FetchMovies = () => {
     };
 
     fetchMovies();
-  }, [location.pathname, movieId]); // Re-fetch data when location or movieId changes
+  }, [MOVIE_DETAILS_URL, POPULAR_MOVIES_URL, UPCOMING_MOVIES_URL, location.pathname, movieId]); // Re-fetch data when location or movieId changes
 
   return (
     <>
