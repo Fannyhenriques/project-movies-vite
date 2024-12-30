@@ -1,33 +1,32 @@
 /* eslint-disable react/prop-types */
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import arrow from "./../assets/arrow.png";
 
 const GoBackWrapper = styled.div`
-  position: absolute;
+  padding: 40px;
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 5px;
-  top: 20px;
-  left: 60px;
+  box-sizing: border-box;
 
   @media (max-width: 786px) {
-    top: 20px;
-    padding-bottom: 20px;
+    padding-top: 30px;
+    height: 40px;
+    padding-bottom: 0;
   }
 `;
 
 const StyledLink = styled(Link)`
-  z-index: 1;
   text-decoration: none;
   color: inherit;
   font-weight: 700;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 10px;
   font-size: 25px;
-  padding: 40px;
   transition: box-shadow 0.3s ease-in-out;
 
   &:hover {
@@ -38,6 +37,7 @@ const StyledLink = styled(Link)`
 
   @media (max-width: 786px) {
     padding-top: 10px;
+    padding-left: 30px;
     margin-bottom: 30px;
     font-size: 20px;
   }
@@ -56,7 +56,6 @@ const ArrowIcon = styled.img`
 
 const MoviePoster = styled.img`
   position: fixed;
-  /* position: absolute; */
   object-fit: cover;
   background-size: cover;
   top: 0;
@@ -81,7 +80,7 @@ const MovieImg = styled.img`
   @media (max-width: 786px) {
     width: 210px;
     height: 310px;
-    margin-top: 100px;
+    margin-top: 70px;
   }
 `;
 
@@ -96,6 +95,7 @@ const MovieWrapper = styled.div`
   justify-content: center;
   gap: 15px;
   width: 70%;
+  height: 90%;
   color: white;
   box-sizing: border-box;
   padding-top: 60px;
@@ -104,12 +104,12 @@ const MovieWrapper = styled.div`
   @media (max-width: 786px) {
     flex-direction: column;
     align-items: center; 
-    width: 80%; 
+    width: 90%; 
     gap: 5px; 
     text-align: center;
     padding-top: 0px;
     min-height: auto;
-    padding-top: 100px;
+    padding-top: 50px;
   }
 `;
 
@@ -136,7 +136,9 @@ const OverView = styled.p`
 
   @media (max-width: 786px) {
   line-height: 1.1;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
+  max-height: 100px;
+  overflow-y: auto;
   }
 `;
 
@@ -182,6 +184,10 @@ export const UpcomingMovieInfo = ({ upcomingMovieInfo, isLoading }) => {
 
   return (
     <>
+      <MoviePoster
+        src={`https://image.tmdb.org/t/p/w1280${upcomingMovieInfo.backdrop_path}`}
+        alt={upcomingMovieInfo.title}
+      />
       <GoBackWrapper>
         <StyledLink to="/upcoming-movies">
           <ArrowIcon src={arrow} alt="Back arrow" />
@@ -189,10 +195,6 @@ export const UpcomingMovieInfo = ({ upcomingMovieInfo, isLoading }) => {
         </StyledLink>
       </GoBackWrapper>
       <div>
-        <MoviePoster
-          src={`https://image.tmdb.org/t/p/w1280${upcomingMovieInfo.backdrop_path}`}
-          alt={upcomingMovieInfo.title}
-        />
         <MovieWrapper>
           <MovieImg src={`https://image.tmdb.org/t/p/w500${upcomingMovieInfo.poster_path}`}
             alt={upcomingMovieInfo.title} />
