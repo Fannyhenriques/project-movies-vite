@@ -4,8 +4,15 @@ import { Link } from "react-router-dom";
 import { Grid } from "../../ui/Grid.jsx";
 
 const PopularTopline = styled.h2`
-  text-align: center;
-  font-size: 30px;
+ text-align: center;
+  font-size: 25px;
+  padding: 30px;
+  padding-top: 40px;
+  color: #a47aa4;
+
+  @media (max-width: 390px) {
+    font-size: 20px;
+  }
 `;
 
 const PopularMovieContainer = styled.div`

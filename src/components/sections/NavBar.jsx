@@ -11,10 +11,17 @@ const Nabvar = styled.nav`
 
 const NavList = styled.ul`
   list-style-type: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   gap: 100px;
+
+  @media (max-width:640px){
+    justify-content: center;
+    gap: 20px;
+  }
 `;
 
 const NavLinkStyled = styled(NavLink)`
@@ -29,6 +36,10 @@ const NavLinkStyled = styled(NavLink)`
   &.active {
     font-weight: bold;
     text-decoration: underline;
+  }
+
+  @media (max-width:640px){
+    font-size: 16px;
   }
 `;
 

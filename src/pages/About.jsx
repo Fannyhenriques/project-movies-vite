@@ -3,22 +3,35 @@ import { Header } from "../components/sections/Header";
 
 const AboutContainer = styled.div`
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 600px;
   text-align: center;
+  gap: 10px;
+
+  @media (max-width: 768px){
+    width: 300px;
+    text-align: left;
+  }
 `;
 
 const AboutTitle = styled.h2`
   font-size: 30px;
+
+  @media (max-width: 768px){
+    font-size: 22px;
+  }
 `;
 
 const AboutContent = styled.p`
   font-size: 20px;
 
+  @media (max-width: 768px){
+    font-size: 16px;
+  }
 `;
 
 export const About = () => {
