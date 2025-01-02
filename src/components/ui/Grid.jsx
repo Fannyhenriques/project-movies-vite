@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import styled from "styled-components"
+import styled from "styled-components";
 
 const GridStyle = styled.div`
   display: grid;

@@ -4,6 +4,7 @@ import styled from "styled-components";
 import arrow from "./../assets/arrow.png";
 
 const GoBackWrapper = styled.div`
+  z-index: 10;
   padding: 40px;
   position: relative;
   display: flex;
@@ -169,7 +170,6 @@ const ReleaseDate = styled.p`
     padding-bottom: 20px;
   }
 `;
-
 
 const Date = styled.span`
   font-weight: 700;

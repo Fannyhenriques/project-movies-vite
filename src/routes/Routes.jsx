@@ -13,4 +13,3 @@ export const routesPage = (
     <Route key="About" path="/About" element={<About />} />
   </>
 );
-

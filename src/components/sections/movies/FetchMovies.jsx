@@ -25,22 +25,22 @@ export const FetchMovies = () => {
       try {
         setIsLoading(true);
         if (location.pathname === "/" && !movieId) {
-          // Fetch popular movies on the homepage (no movieId in URL)
+          // Fetches popular movies on the homepage (no movieId in URL)
           const response = await fetch(POPULAR_MOVIES_URL);
           const data = await response.json();
           setPopularMovies(data.results || []);
         } else if (location.pathname === "/upcoming-movies" && !movieId) {
-          // Fetch upcoming movies on the upcoming movies page (no movieId in URL)
+          // Fetches upcoming movies on the upcoming movies page (no movieId in URL)
           const response = await fetch(UPCOMING_MOVIES_URL);
           const data = await response.json();
           setUpcomingMovies(data.results || []);
         } else if (movieId && location.pathname === `/popular-movie-info/${movieId}`) {
-          // Fetch popular movie details if movieId is present in the URL
+          // Fetches popular movie details if movieId is present in the URL
           const response = await fetch(`${MOVIE_DETAILS_URL}/${movieId}?api_key=${API_KEY}&language=en-US`);
           const data = await response.json();
           setPopularMovieDetails(data);
         } else if (movieId && location.pathname === `/upcoming-movie-info/${movieId}`) {
-          // Fetch upcoming movie details if movieId is present in the URL for upcoming movies
+          // Fetches upcoming movie details if movieId is present in the URL for upcoming movies
           const response = await fetch(`${MOVIE_DETAILS_URL}/${movieId}?api_key=${API_KEY}&language=en-US`);
           const data = await response.json();
           setUpcomingMovieDetails(data);
@@ -53,7 +53,7 @@ export const FetchMovies = () => {
     };
 
     fetchMovies();
-  }, [MOVIE_DETAILS_URL, POPULAR_MOVIES_URL, UPCOMING_MOVIES_URL, location.pathname, movieId]); // Re-fetch data when location or movieId changes
+  }, [MOVIE_DETAILS_URL, POPULAR_MOVIES_URL, UPCOMING_MOVIES_URL, location.pathname, movieId]); // Re-fetches data when location or movieId changes
 
   return (
     <>

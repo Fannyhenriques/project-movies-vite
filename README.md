@@ -4,31 +4,36 @@
   </a>
 </h1>
 
-# Movie Site Project
+# Movie Library 
+Movie Library is a React app where current and upcoming movies are displayed. The app uses React Router, allowing users to navigate between pages without reloading the site.
+Features:
+- Home Page: Displays popular movies fetched from the API.
+- Upcoming Movies Page: Lists movies that are coming soon.
+- About Page: Provides details about the app.
+- Movie Details: Clicking on a movie shows additional information about that movie.
 
-Replace this readme with your own information about your project.
+### The Problem and process
+- I began by creating pages (Home, Upcoming Movies, About) and defining routes in a central route file. Originally I wanted more pages but as time was limited, I decided to focus on the core pages and removed unused routes.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+- A FetchMovies component was created to fetch movie data and details dynamically using the unique movieId. The data is then passed to the relevant pages and components. Movie lists and details were rendered on the respective pages. While the app works as intended, I recognized areas for improvement in the component structure as the project grew more complex.
 
-## Getting Started with the Project
+- My initial goal was to use reusable components (e.g., for typography and buttons). I started with a reusable grid but couldn’t implement all reusable structures as planned.
+The app’s structure became somewhat complex as the project evolved, which made parts of the code redundant and repetitive.
 
-### Dependency Installation & Startup Development Server
+- I had some difficulties with making the app responsive, one solution to making the page look good in mobile (ex. iphone 5/SE) was to set the descripton of the movie to a fixed height and make it scrollable. If I had more time I would refine the styling for better responsiveness. 
 
-Once cloned, navigate to the project's root directory and this project uses npm (Node Package Manager) to manage its dependencies.
+### If I had more time I would improve:
+- Code Organization: As the app evolved, it became evident that restructuring the project into smaller reusable components would improve maintainability. If I had more time I would perhaps change the all in all structure of the app for better maintalability. 
 
-The command below is a combination of installing dependencies, opening up the project on VS Code and it will run a development server on your terminal.
+- Create a reusable component for movie details to reduce redundancy.
 
-```bash
-npm i && code . && npm run dev
-```
+- Add a search bar to let users find movies by title.
 
-### The Problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+- Implement better error handeling/messages for failed API requests or when a movie is not found.
 
 ### View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://fannys-movie-library.netlify.app/
 
 ## Instructions
 

@@ -4,21 +4,28 @@ import styled from "styled-components";
 import arrow from "./../assets/arrow.png";
 
 const GoBackWrapper = styled.div`
-  position: absolute;
+  z-index: 10;
+  padding: 40px;
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 5px;
+  box-sizing: border-box;
+
+  @media (max-width: 786px) {
+    padding-top: 30px;
+    height: 40px;
+    padding-bottom: 0;
+  }
 `;
 
 const StyledLink = styled(Link)`
-  z-index: 1;
   text-decoration: none;
   color: inherit;
   font-weight: 700;
-  padding: 40px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: flex-start;
   gap: 10px;
   font-size: 25px;
   transition: box-shadow 0.3s ease-in-out;
@@ -28,57 +35,112 @@ const StyledLink = styled(Link)`
     box-shadow: #FFF;
     text-shadow: 1px 0px 1px white;
   }
+
+  @media (max-width: 786px) {
+    padding-top: 10px;
+    padding-left: 30px;
+    margin-bottom: 30px;
+    font-size: 20px;
+  }
 `;
 
 const ArrowIcon = styled.img`
   width: 30px;
   height: 30px;
   filter: invert(1);
+
+  @media (max-width: 786px) {
+    width: 25px;
+    height: 25px;
+  }
   `;
 
 const MoviePoster = styled.img`
-position: absolute;
-object-fit: cover;
-width: 100vw;
-height: 100vh;
-/* width: 100vw;
-height: auto; */
-opacity: 0.3;
+  position: fixed;
+  object-fit: cover;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  min-height: 100vh;
+  height: auto;
+  opacity: 0.3;
+  background-repeat: no-repeat; 
+
+  @media (max-width: 786px) {
+    min-height: auto;
+    height: 100%;
+  }
 `;
 
 const MovieImg = styled.img`
-width: 350px;
-height: 400px;
-border: 2px solid white;
+  width: 340px;
+  height: 390px;
+  border: 2px solid white;
+
+  @media (max-width: 786px) {
+    width: 210px;
+    height: 310px;
+    margin-top: 70px;
+  }
 `;
 
 const MovieWrapper = styled.div`
-  position: absolute; /* To position it relative to the poster */
+  position: absolute; 
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Center horizontally and vertically */
+  transform: translate(-50%, -50%); 
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 15px;
   width: 70%;
+  height: 90%;
   color: white;
   box-sizing: border-box;
+  padding-top: 60px;
+  padding-bottom: 20px;
+
+  @media (max-width: 786px) {
+    flex-direction: column;
+    align-items: center; 
+    width: 90%; 
+    gap: 5px; 
+    text-align: center;
+    padding-top: 0px;
+    min-height: auto;
+    padding-top: 50px;
+  }
 `;
 
 const ContentBox = styled.div`
   box-sizing: border-box;
-  padding-top: 90px; 
+  padding-top: 60px; 
+
+  @media (max-width: 786px) {
+    padding-top: 5px;
+  }
 `;
 
 const Title = styled.h2`
   font-weight: 1000;
   padding-bottom: 5px;
+
+  @media (max-width: 786px) {
+    font-size: 18px;
+  }
 `;
 
 const OverView = styled.p`
   padding-bottom: 15px;
+
+  @media (max-width: 786px) {
+    line-height: 1.1;
+    padding-bottom: 15px;
+    max-height: 100px;
+    overflow-y: auto;
+  }
 `;
 
 const Rating = styled.p`
@@ -88,6 +150,10 @@ const Rating = styled.p`
   background-color: #FFF;
   display: inline;
   padding: 5px;
+
+  @media (max-width: 786px) {
+    font-size: 14px;
+  }
 `;
 
 const Star = styled.span`
@@ -98,6 +164,11 @@ const Star = styled.span`
 const ReleaseDate = styled.p`
   padding-top: 15px;
   font-weight: 200;
+
+  @media (max-width: 786px) {
+    font-size: 16px;
+    padding-bottom: 20px;
+  }
 `;
 
 const Date = styled.span`
@@ -135,4 +206,4 @@ export const PopularMovieInfo = ({ popularMovieInfo, isLoading }) => {
       </div>
     </>
   );
-};
+}; 

@@ -60,7 +60,6 @@ const TitleDisplay = styled.span`
   }
 `;
 
-
 export const PopularMovies = ({ popularMovies, isLoading }) => {
 
   if (isLoading) {
