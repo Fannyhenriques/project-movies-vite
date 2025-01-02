@@ -184,16 +184,16 @@ export const UpcomingMovieInfo = ({ upcomingMovieInfo, isLoading }) => {
 
   return (
     <>
-      <MoviePoster
-        src={`https://image.tmdb.org/t/p/w1280${upcomingMovieInfo.backdrop_path}`}
-        alt={upcomingMovieInfo.title}
-      />
       <GoBackWrapper>
         <StyledLink to="/upcoming-movies">
           <ArrowIcon src={arrow} alt="Back arrow" />
           Go Back
         </StyledLink>
       </GoBackWrapper>
+      <MoviePoster
+        src={`https://image.tmdb.org/t/p/w1280${upcomingMovieInfo.backdrop_path}`}
+        alt={upcomingMovieInfo.title}
+      />
       <div>
         <MovieWrapper>
           <MovieImg src={`https://image.tmdb.org/t/p/w500${upcomingMovieInfo.poster_path}`}
